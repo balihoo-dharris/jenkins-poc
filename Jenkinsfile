@@ -4,7 +4,7 @@ node {
     stage 'Checkout'
 
     // // Get some code from a GitHub repository
-    git url: 'git@github.com:balihoo-dharris/jenkins-poc.git'
+    git url: 'git@github.com:balihoo-dharris/jenkins-poc.git', credentialsId: 'balihoo-dharris'
 
     // Get the Terraform tool.
     def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
